@@ -12,7 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
@@ -60,24 +59,22 @@ public class HomeController {
             return "add";
         }
 
-
         Optional<Employer> employerObjs = employerRepository.findById(employerId);
-        Employer employer = employerResult.get();
-        newJob.setEmployer(employer);
+        Employer employerObject = employerObjs.get();
+        newJob.setEmployer(employerObject);
 
         List<Skill> skillObjs = (List<Skill>) skillRepository.findAllById(skills);
         newJob.setSkills(skillObjs);
 
-        jobRepository.save(newJob);
 
+        jobRepository.save(newJob);
         return "redirect:";
     }
 
     @GetMapping("view/{jobId}")
     public String displayViewJob(Model model, @PathVariable int jobId) {
 
-        return "view";
-    }
-
+            return "view";
+        }
 
 }

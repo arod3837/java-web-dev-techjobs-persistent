@@ -78,8 +78,6 @@ public class JobData {
                 results.add(job);
             } else if (job.getSkills().toString().toLowerCase().contains(lower_val)) {
                 results.add(job);
-            } else if (job.toString().toLowerCase().contains(lower_val)) {
-                results.add(job);
             }
 
         }

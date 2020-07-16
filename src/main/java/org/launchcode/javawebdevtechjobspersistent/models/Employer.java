@@ -13,7 +13,7 @@ public class Employer extends AbstractEntity {
 
     @OneToMany
 
-    @JoinColumn(name = "employer_id")
+    @JoinColumn
 //    Step 3
 //    add a private property jobs of type List<Job>
 //    and initialize it to an empty ArrayList.

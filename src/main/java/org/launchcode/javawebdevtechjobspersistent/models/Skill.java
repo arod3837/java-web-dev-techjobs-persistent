@@ -11,21 +11,21 @@ import java.util.List;
 public class Skill extends AbstractEntity {
 
     //add a field for a longer description of the skill.
-    @Size(min = 15, max = 500)
+    @Size(min = 10, max = 500)
     @NotBlank(message = "Please provide a short description")
     private String description;
 
     @ManyToMany(mappedBy = "skills")
-    private List<Job> jobs = new ArrayList<>();
+    private final List<Job> jobs = new ArrayList<>();
 
     public Skill () {
 
     }
 
-    public Skill(String aDescription) {
-        super();
-        this.description = aDescription;
-    }
+//    public Skill(String aDescription) {
+//        super();
+//        this.description = aDescription;
+//    }
 
     public String getDescription() {
         return description;
@@ -34,13 +34,13 @@ public class Skill extends AbstractEntity {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public List<Job> getJobs() {
-        return jobs;
-    }
-
-    public void setJobs(List<Job> jobs) {
-        this.jobs = jobs;
-    }
+//
+//    public List<Job> getJobs() {
+//        return jobs;
+//    }
+//
+//    public void setJobs(List<Job> jobs) {
+//        this.jobs = jobs;
+//    }
 }
 
