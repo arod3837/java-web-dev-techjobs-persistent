@@ -1,5 +1,8 @@
 ## Part 1: Test it with SQL
-
+id(int)
+employer VARCHAR
+skills VARCHAR
+name VARCHAR
 ## Part 2: Test it with SQL
 SELECT techjobs
 FROM employer

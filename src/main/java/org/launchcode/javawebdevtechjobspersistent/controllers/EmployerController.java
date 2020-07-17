@@ -21,6 +21,7 @@ public class EmployerController {
     @Autowired
     private EmployerRepository employerRepository;
 
+
     @RequestMapping("")
     public String index(Model model) {
         model.addAttribute("title", "Employer");

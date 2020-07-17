@@ -17,7 +17,7 @@ public class Employer extends AbstractEntity {
 //    Step 3
 //    add a private property jobs of type List<Job>
 //    and initialize it to an empty ArrayList.
-    private final List<Job> jobs = new ArrayList<>();
+    private List<Job> jobs = new ArrayList<>();
 
     // Step 2
     // string field for location with validation
@@ -26,7 +26,7 @@ public class Employer extends AbstractEntity {
     @NotBlank(message = "Location is required")
     private String location;
 
-    public Employer () {
+    public Employer() {
 
     }
 
@@ -42,5 +42,9 @@ public class Employer extends AbstractEntity {
 
     public List<Job> getJobs() {
         return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
     }
 }
